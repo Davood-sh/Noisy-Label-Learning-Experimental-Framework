@@ -1,0 +1,23 @@
+# Core
+python-dateutil
+numpy>=1.18
+torch>=1.7
+torchvision>=0.8
+
+# Data & augmentation
+Pillow>=7.0
+scikit-learn>=0.22
+tqdm>=4.45
+
+# Configuration
+theconf>=0.3
+
+# Logging & visualization
+tensorboardX>=2.0
+warmup-scheduler>=0.3
+
+# Optional model dependencies
+comet-ml               # if you use offline logging with SOP
+
+# Utilities (if used by any wrapper or loader)
+PyYAML

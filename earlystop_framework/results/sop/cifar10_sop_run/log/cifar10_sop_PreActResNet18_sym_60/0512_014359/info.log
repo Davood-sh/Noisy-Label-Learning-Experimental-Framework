@@ -1,0 +1,16 @@
+2025-05-12 01:44:01,839 - train - INFO - OrderedDict({'model': 'sop', 'name': 'cifar10_sop_PreActResNet18', 'n_gpu': 1, 'seed': 123, 'comet': OrderedDict({'project_name': '', 'api': '', 'offline': True}), 'mixup': OrderedDict({'alpha': 0}), 'arch': OrderedDict({'type': 'PreActResNet18', 'args': OrderedDict({'num_classes': 10})}), 'reparam_arch': OrderedDict({'type': 'reparameterization', 'args': OrderedDict({'n_samples': 50000, 'num_classes': 10, 'init': 'gaussian', 'mean': 0.0, 'std': 1e-08})}), 'num_classes': 10, 'data_augmentation': OrderedDict({'type': 'autoaug_cifar10', 'cutout': 16}), 'data_loader': OrderedDict({'type': 'CIFAR10DataLoader', 'args': OrderedDict({'data_dir': 'D:/earlystop_framework/data', 'batch_size': 128, 'shuffle': True, 'validation_split': 0.1, 'num_batches': 0, 'num_workers': 4, 'pin_memory': True})}), 'optimizer': OrderedDict({'type': 'SGD', 'args': OrderedDict({'lr': 0.02, 'momentum': 0.9, 'weight_decay': 0.001})}), 'optimizer_overparametrization': OrderedDict({'type': 'SGD', 'args': OrderedDict({'lr': 1.0, 'momentum': 0.0, 'weight_decay': 0.0})}), 'lr_u': 1, 'lr_v': 10, 'train_loss': OrderedDict({'type': 'overparametrization_loss', 'args': OrderedDict({'num_examp': 50000, 'num_classes': 10, 'ratio_consistency': 0.9, 'ratio_balance': 0.1})}), 'val_loss': OrderedDict({'type': 'cross_entropy_val', 'args': OrderedDict()}), 'metrics': ['my_metric', 'my_metric2'], 'lr_scheduler': OrderedDict({'type': 'CosineAnnealingLR', 'args': OrderedDict({'T_max': 300, 'eta_min': 0.0002})}), 'trainer': OrderedDict({'epochs': 1, 'warmup': 0, 'percent': 0.6, 'asym': False, 'instance': False, 'real': None, 'save_dir': 'D:/earlystop_framework/results/sop/cifar10_sop_run', 'save_period': 1, 'verbosity': 2, 'monitor': 'max val_my_metric', 'early_stop': 2000, 'tensorboard': False, 'mlflow': False})})
+2025-05-12 01:50:03,332 - trainer - INFO -     epoch          : 1
+2025-05-12 01:50:03,333 - trainer - INFO -     loss           : 4.134047547874548
+2025-05-12 01:50:03,334 - trainer - INFO -     noise level    : 0.0
+2025-05-12 01:50:03,334 - trainer - INFO -     my_metric      : 0.18679667519181584
+2025-05-12 01:50:03,335 - trainer - INFO -     my_metric2     : 0.6295796035805626
+2025-05-12 01:50:03,335 - trainer - INFO -     learning rate  : [0.02]
+2025-05-12 01:50:03,336 - trainer - INFO -     training_time  : 273.631
+2025-05-12 01:50:03,337 - trainer - INFO -     val_loss       : 2.20190052986145
+2025-05-12 01:50:03,337 - trainer - INFO -     val_my_metric  : 0.2292
+2025-05-12 01:50:03,338 - trainer - INFO -     val_my_metric2 : 0.6448
+2025-05-12 01:50:03,338 - trainer - INFO -     test_loss      : 1.8519029021263123
+2025-05-12 01:50:03,339 - trainer - INFO -     test_my_metric : 0.4328
+2025-05-12 01:50:03,339 - trainer - INFO -     test_my_metric2: 0.8818000000000001
+2025-05-12 01:50:03,340 - trainer - INFO -     inference_time : 42.158
+2025-05-12 01:50:03,490 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\sop\cifar10_sop_run\models\cifar10_sop_PreActResNet18_sym_60\0512_014359\model_best.pth ...

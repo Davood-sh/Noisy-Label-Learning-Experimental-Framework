@@ -1,0 +1,12 @@
+{
+    "model":    "cores",
+    "dataset":  "cifar10",
+    "loss":     "cores",
+    "noise_type": "instance",
+    "noise_rate": 0.6,
+    "seed": 123,
+    "data_dir": "D:/earlystop_framework/data",
+    "result_dir": "D:/earlystop_framework/results/cores",
+    "phase2_config": "D:/earlystop_framework/models/CORES/phase2/confs/resnet34_ins_0.6.yaml"
+  }
+  

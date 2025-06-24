@@ -1,0 +1,12 @@
+2025-04-30 13:54:26,730 - train - INFO - OrderedDict({'model': 'elr', 'name': 'cifar10_elr_resnet34', 'n_gpu': 1, 'seed': 123, 'arch': OrderedDict({'type': 'resnet34', 'args': OrderedDict({'num_classes': 10})}), 'num_classes': 10, 'data_loader': OrderedDict({'type': 'CIFAR10DataLoader', 'args': OrderedDict({'data_dir': 'D:/earlystop_framework/data', 'batch_size': 128, 'shuffle': True, 'validation_split': 0.1, 'num_batches': 0, 'num_workers': 4, 'pin_memory': True})}), 'optimizer': OrderedDict({'type': 'SGD', 'args': OrderedDict({'lr': 0.1, 'momentum': 0.9, 'weight_decay': 0.0005})}), 'lr_scheduler': OrderedDict({'type': 'MultiStepLR', 'args': OrderedDict({'milestones': [80, 120], 'gamma': 0.1})}), 'train_loss': OrderedDict({'type': 'elr_loss', 'args': OrderedDict({'beta': 0.7, 'lambda': 3.0})}), 'val_loss': 'cross_entropy', 'metrics': ['my_metric'], 'trainer': OrderedDict({'epochs': 1, 'percent': 0.2, 'asym': False, 'begin': 0, 'warmup': 0, 'save_dir': 'D:/earlystop_framework/results/elr/cifar10_noise20', 'save_period': 1, 'verbosity': 2, 'label_dir': 'D:/earlystop_framework/results/elr/labels', 'monitor': 'max val_my_metric', 'early_stop': 2000, 'tensorboard': False, 'mlflow': False})})
+2025-04-30 14:00:22,869 - trainer - INFO -     epoch          : 1
+2025-04-30 14:00:22,869 - trainer - INFO -     loss           : 2.0731920312074097
+2025-04-30 14:00:22,869 - trainer - INFO -     my_metric      : 0.21295474273989898
+2025-04-30 14:00:22,883 - trainer - INFO -     learning rate  : [0.1]
+2025-04-30 14:00:22,884 - trainer - INFO -     train_time     : 214.45265674591064
+2025-04-30 14:00:22,885 - trainer - INFO -     val_loss       : 1.9722742319107056
+2025-04-30 14:00:22,886 - trainer - INFO -     val_my_metric  : 0.289
+2025-04-30 14:00:22,886 - trainer - INFO -     test_loss      : 1.7852224111557007
+2025-04-30 14:00:22,887 - trainer - INFO -     test_my_metric : 0.3409
+2025-04-30 14:00:22,888 - trainer - INFO -     inference_time : 77.04495072364807
+2025-04-30 14:00:23,162 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr\cifar10_noise20\models\cifar10_elr_resnet34_sym_20\0430_135423\model_best.pth ...

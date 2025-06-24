@@ -1,0 +1,4 @@
+1 16.8599 23.6200
+
+training_time:  59.7s
+inference_time: 14.9s

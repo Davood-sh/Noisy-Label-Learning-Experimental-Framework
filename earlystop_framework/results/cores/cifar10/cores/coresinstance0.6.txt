@@ -1,0 +1,5 @@
+epoch train_acc test_acc
+0 54.5376 11.0200
+
+training_time: 239.7s
+inference_time: 30.2s

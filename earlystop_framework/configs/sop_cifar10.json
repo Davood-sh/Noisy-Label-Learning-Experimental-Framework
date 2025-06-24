@@ -1,0 +1,118 @@
+{
+    "model": "sop",
+    "name": "cifar10_sop_PreActResNet18",
+    "n_gpu": 1,
+    "seed": 123,
+  
+    "comet": {
+      "project_name": "",
+      "api": "",
+      "offline": true
+    },
+  
+    "mixup": {
+      "alpha": 0
+    },
+  
+    "arch": {
+      "type": "PreActResNet18",
+      "args": {
+        "num_classes": 10      
+      }
+    },
+  
+    "reparam_arch": {
+      "type": "reparameterization",
+      "args": {
+        "n_samples":    50000,
+        "num_classes":  10,     
+        "init":         "gaussian",
+        "mean":         0.0,
+        "std":          1e-8
+      }
+    },
+  
+    "num_classes": 10,         
+  
+    "data_augmentation": {
+      "type": "autoaug_cifar10", 
+      "cutout": 16
+    },
+    "data_loader": {
+      "type": "CIFAR10DataLoader",  
+      "args": {
+        "data_dir":         "D:/earlystop_framework/data",
+        "batch_size":       128,
+        "shuffle":          true,
+        "validation_split": 0.1,      
+        "num_batches":      0,
+        "num_workers":      4,        
+        "pin_memory":       true
+      }
+    },
+  
+    "optimizer": {
+      "type": "SGD",
+      "args": {
+        "lr":            0.02,
+        "momentum":      0.9,
+        "weight_decay":  1e-3
+      }
+    },
+    "optimizer_overparametrization": {
+      "type": "SGD",
+      "args": {
+        "lr":           1.0,
+        "momentum":     0.0,
+        "weight_decay": 0.0
+      }
+    },
+  
+    "lr_u": 1,
+    "lr_v": 10,
+  
+    "train_loss": {
+      "type": "overparametrization_loss",
+      "args": {
+        "num_examp":         50000,
+        "num_classes":       10,    
+        "ratio_consistency": 0.9,
+        "ratio_balance":     0.1
+      }
+    },
+    "val_loss": {
+      "type": "cross_entropy_val",
+      "args": {}
+    },
+  
+    "metrics": [
+      "my_metric", "my_metric2"
+    ],
+  
+    "lr_scheduler": {
+      "type": "CosineAnnealingLR",
+      "args": {
+        "T_max":   300,
+        "eta_min": 0.0002
+      }
+    },
+  
+    "trainer": {
+      "epochs":       1,
+      "warmup":       0,
+      "percent":      0.6,
+      "asym":         false,
+      "instance":     false,
+      "real":         null,
+  
+      "save_dir":     "D:/earlystop_framework/results/sop/cifar10_sop_run",  
+      "save_period":  1,
+      "verbosity":    2,
+      "monitor":      "max val_my_metric",
+      "early_stop":   2000,
+  
+      "tensorboard":  false,
+      "mlflow":       false
+    }
+  }
+  

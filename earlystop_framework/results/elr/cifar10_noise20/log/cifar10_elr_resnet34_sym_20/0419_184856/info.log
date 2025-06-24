@@ -1,0 +1,46 @@
+2025-04-19 18:48:59,086 - train - INFO - OrderedDict({'model': 'elr', 'name': 'cifar10_elr_resnet34', 'n_gpu': 1, 'seed': 123, 'arch': OrderedDict({'type': 'resnet34', 'args': OrderedDict({'num_classes': 10})}), 'num_classes': 10, 'data_loader': OrderedDict({'type': 'CIFAR10DataLoader', 'args': OrderedDict({'data_dir': 'D:/earlystop_framework/data', 'batch_size': 128, 'shuffle': True, 'validation_split': 0.1, 'num_batches': 0, 'num_workers': 4, 'pin_memory': True})}), 'optimizer': OrderedDict({'type': 'SGD', 'args': OrderedDict({'lr': 0.1, 'momentum': 0.9, 'weight_decay': 0.0005})}), 'lr_scheduler': OrderedDict({'type': 'MultiStepLR', 'args': OrderedDict({'milestones': [80, 120], 'gamma': 0.1})}), 'train_loss': OrderedDict({'type': 'elr_loss', 'args': OrderedDict({'beta': 0.7, 'lambda': 3.0})}), 'val_loss': 'cross_entropy', 'metrics': ['my_metric'], 'trainer': OrderedDict({'epochs': 5, 'percent': 0.2, 'asym': False, 'begin': 0, 'warmup': 0, 'save_dir': 'D:/earlystop_framework/results/elr/cifar10_noise20', 'save_period': 1, 'verbosity': 2, 'label_dir': 'D:/earlystop_framework/results/elr/labels', 'monitor': 'max val_my_metric', 'early_stop': 2000, 'tensorboard': False, 'mlflow': False})})
+2025-04-19 18:54:58,465 - trainer - INFO -     epoch          : 1
+2025-04-19 18:54:58,465 - trainer - INFO -     loss           : 2.1489661864259024
+2025-04-19 18:54:58,466 - trainer - INFO -     my_metric      : 0.17549518623737373
+2025-04-19 18:54:58,467 - trainer - INFO -     learning rate  : [0.1]
+2025-04-19 18:54:58,467 - trainer - INFO -     val_loss       : 2.0307724237442017
+2025-04-19 18:54:58,468 - trainer - INFO -     val_my_metric  : 0.27020000000000005
+2025-04-19 18:54:58,468 - trainer - INFO -     test_loss      : 1.8151903748512268
+2025-04-19 18:54:58,469 - trainer - INFO -     test_my_metric : 0.3005
+2025-04-19 18:54:58,728 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr\cifar10_noise20\models\cifar10_elr_resnet34_sym_20\0419_184856\model_best.pth ...
+2025-04-19 19:00:59,876 - trainer - INFO -     epoch          : 2
+2025-04-19 19:00:59,876 - trainer - INFO -     loss           : 1.692487771199508
+2025-04-19 19:00:59,877 - trainer - INFO -     my_metric      : 0.2891932015467172
+2025-04-19 19:00:59,877 - trainer - INFO -     learning rate  : [0.1]
+2025-04-19 19:00:59,878 - trainer - INFO -     val_loss       : 1.9747315406799317
+2025-04-19 19:00:59,878 - trainer - INFO -     val_my_metric  : 0.32260000000000005
+2025-04-19 19:00:59,879 - trainer - INFO -     test_loss      : 1.688775098323822
+2025-04-19 19:00:59,879 - trainer - INFO -     test_my_metric : 0.3756
+2025-04-19 19:01:00,165 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr\cifar10_noise20\models\cifar10_elr_resnet34_sym_20\0419_184856\model_best.pth ...
+2025-04-19 19:07:01,666 - trainer - INFO -     epoch          : 3
+2025-04-19 19:07:01,667 - trainer - INFO -     loss           : 1.3956494602290066
+2025-04-19 19:07:01,667 - trainer - INFO -     my_metric      : 0.35280786379419193
+2025-04-19 19:07:01,667 - trainer - INFO -     learning rate  : [0.1]
+2025-04-19 19:07:01,668 - trainer - INFO -     val_loss       : 1.8750397443771363
+2025-04-19 19:07:01,668 - trainer - INFO -     val_my_metric  : 0.3742
+2025-04-19 19:07:01,668 - trainer - INFO -     test_loss      : 1.5075520157814026
+2025-04-19 19:07:01,669 - trainer - INFO -     test_my_metric : 0.4504
+2025-04-19 19:07:01,954 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr\cifar10_noise20\models\cifar10_elr_resnet34_sym_20\0419_184856\model_best.pth ...
+2025-04-19 19:13:03,878 - trainer - INFO -     epoch          : 4
+2025-04-19 19:13:03,878 - trainer - INFO -     loss           : 1.0596673077141696
+2025-04-19 19:13:03,878 - trainer - INFO -     my_metric      : 0.4037863991477273
+2025-04-19 19:13:03,879 - trainer - INFO -     learning rate  : [0.1]
+2025-04-19 19:13:03,879 - trainer - INFO -     val_loss       : 1.9723148584365844
+2025-04-19 19:13:03,880 - trainer - INFO -     val_my_metric  : 0.40540000000000004
+2025-04-19 19:13:03,880 - trainer - INFO -     test_loss      : 1.532120680809021
+2025-04-19 19:13:03,880 - trainer - INFO -     test_my_metric : 0.47450000000000003
+2025-04-19 19:13:04,161 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr\cifar10_noise20\models\cifar10_elr_resnet34_sym_20\0419_184856\model_best.pth ...
+2025-04-19 19:19:06,149 - trainer - INFO -     epoch          : 5
+2025-04-19 19:19:06,149 - trainer - INFO -     loss           : 0.6995354015380144
+2025-04-19 19:19:06,150 - trainer - INFO -     my_metric      : 0.44627673216540403
+2025-04-19 19:19:06,151 - trainer - INFO -     learning rate  : [0.1]
+2025-04-19 19:19:06,151 - trainer - INFO -     val_loss       : 1.8214460611343384
+2025-04-19 19:19:06,152 - trainer - INFO -     val_my_metric  : 0.47120000000000006
+2025-04-19 19:19:06,152 - trainer - INFO -     test_loss      : 1.3090254187583923
+2025-04-19 19:19:06,153 - trainer - INFO -     test_my_metric : 0.5584
+2025-04-19 19:19:06,423 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr\cifar10_noise20\models\cifar10_elr_resnet34_sym_20\0419_184856\model_best.pth ...

@@ -1,0 +1,106 @@
+2025-04-20 13:09:12,334 - train - INFO - OrderedDict({'model': 'elr_plus', 'name': 'cifar10_elrplus_resnet34', 'n_gpu': 1, 'seed': 123, 'arch1': OrderedDict({'type': 'resnet34', 'args': OrderedDict({'num_classes': 10})}), 'arch2': OrderedDict({'type': 'resnet34', 'args': OrderedDict({'num_classes': 10})}), 'num_classes': 10, 'mixup_alpha': 0.2, 'coef_step': 50000, 'ema_alpha': 0.99, 'ema_update': True, 'ema_step': 40000, 'data_loader': OrderedDict({'type': 'CIFAR10DataLoader', 'args': OrderedDict({'data_dir': 'D:/earlystop_framework/data', 'batch_size': 128, 'batch_size2': 128, 'shuffle': True, 'validation_split': 0.1, 'num_batches': 0, 'num_workers': 4, 'pin_memory': True})}), 'optimizer1': OrderedDict({'type': 'SGD', 'args': OrderedDict({'lr': 0.1, 'momentum': 0.9, 'weight_decay': 0.0005})}), 'optimizer2': OrderedDict({'type': 'SGD', 'args': OrderedDict({'lr': 0.1, 'momentum': 0.9, 'weight_decay': 0.0005})}), 'lr_scheduler': OrderedDict({'type': 'MultiStepLR', 'args': OrderedDict({'milestones': [80, 120], 'gamma': 0.1})}), 'train_loss': OrderedDict({'type': 'elr_plus_loss', 'args': OrderedDict({'beta': 0.7, 'lambda': 3.0})}), 'val_loss': 'cross_entropy', 'metrics': ['my_metric'], 'trainer': OrderedDict({'epochs': 5, 'warmup': 0, 'percent': 0.2, 'asym': False, 'begin': 0, 'save_dir': 'D:/earlystop_framework/results/elr_plus/cifar10_noise20', 'label_dir': 'D:/earlystop_framework/results/elr_plus/labels', 'save_period': 1, 'verbosity': 2, 'monitor': 'max val_my_metric', 'early_stop': 2000, 'tensorboard': False, 'mlflow': False})})
+2025-04-20 13:23:30,982 - trainer - INFO -     epoch          : 1
+2025-04-20 13:23:30,982 - trainer - INFO -     Net1global step: 0
+2025-04-20 13:23:30,982 - trainer - INFO -     Net2global step: 0
+2025-04-20 13:23:30,983 - trainer - INFO -     Net1local_step : 352
+2025-04-20 13:23:30,983 - trainer - INFO -     Net2local_step : 352
+2025-04-20 13:23:30,984 - trainer - INFO -     Net1loss       : 2.3008532266725195
+2025-04-20 13:23:30,984 - trainer - INFO -     Net2loss       : 2.4021379548040303
+2025-04-20 13:23:30,984 - trainer - INFO -     Net1my_metric  : 0.1901929450757576
+2025-04-20 13:23:30,985 - trainer - INFO -     Net2my_metric  : 0.1245067866161616
+2025-04-20 13:23:30,985 - trainer - INFO -     Net1metrics_ema: [0.09962910353535354]
+2025-04-20 13:23:30,986 - trainer - INFO -     Net2metrics_ema: [0.25464607007575757]
+2025-04-20 13:23:30,986 - trainer - INFO -     Net1learning rate: [0.1]
+2025-04-20 13:23:30,987 - trainer - INFO -     Net2learning rate: [0.1]
+2025-04-20 13:23:30,987 - trainer - INFO -     Net1val_loss   : 2.0811984539031982
+2025-04-20 13:23:30,987 - trainer - INFO -     Net2val_loss   : 2.0811984539031982
+2025-04-20 13:23:30,988 - trainer - INFO -     val_my_metric  : 0.25440000000000007
+2025-04-20 13:23:30,988 - trainer - INFO -     Net1test_loss  : 1.981682252883911
+2025-04-20 13:23:30,989 - trainer - INFO -     Net2test_loss  : 1.981682252883911
+2025-04-20 13:23:30,989 - trainer - INFO -     test_my_metric : 0.31
+2025-04-20 13:23:31,687 - trainer - INFO - Saving checkpoint: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\checkpoint-epoch1.pth ...
+2025-04-20 13:23:32,244 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\model_best.pth ...
+2025-04-20 13:37:49,971 - trainer - INFO -     epoch          : 2
+2025-04-20 13:37:49,972 - trainer - INFO -     Net1global step: 352
+2025-04-20 13:37:49,972 - trainer - INFO -     Net2global step: 352
+2025-04-20 13:37:49,973 - trainer - INFO -     Net1local_step : 352
+2025-04-20 13:37:49,973 - trainer - INFO -     Net2local_step : 352
+2025-04-20 13:37:49,974 - trainer - INFO -     Net1loss       : 2.0484199297021735
+2025-04-20 13:37:49,974 - trainer - INFO -     Net2loss       : 2.114471745761958
+2025-04-20 13:37:49,975 - trainer - INFO -     Net1my_metric  : 0.2725595801767677
+2025-04-20 13:37:49,975 - trainer - INFO -     Net2my_metric  : 0.2265649660669192
+2025-04-20 13:37:49,976 - trainer - INFO -     Net1metrics_ema: [0.17334724195075757]
+2025-04-20 13:37:49,976 - trainer - INFO -     Net2metrics_ema: [0.313784820864899]
+2025-04-20 13:37:49,977 - trainer - INFO -     Net1learning rate: [0.1]
+2025-04-20 13:37:49,977 - trainer - INFO -     Net2learning rate: [0.1]
+2025-04-20 13:37:49,978 - trainer - INFO -     Net1val_loss   : 1.9279616832733155
+2025-04-20 13:37:49,978 - trainer - INFO -     Net2val_loss   : 1.9279616832733155
+2025-04-20 13:37:49,978 - trainer - INFO -     val_my_metric  : 0.314
+2025-04-20 13:37:49,979 - trainer - INFO -     Net1test_loss  : 1.7234026193618774
+2025-04-20 13:37:49,979 - trainer - INFO -     Net2test_loss  : 1.7234026193618774
+2025-04-20 13:37:49,980 - trainer - INFO -     test_my_metric : 0.37750000000000006
+2025-04-20 13:37:50,634 - trainer - INFO - Saving checkpoint: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\checkpoint-epoch2.pth ...
+2025-04-20 13:37:51,212 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\model_best.pth ...
+2025-04-20 13:52:07,994 - trainer - INFO -     epoch          : 3
+2025-04-20 13:52:07,995 - trainer - INFO -     Net1global step: 704
+2025-04-20 13:52:07,995 - trainer - INFO -     Net2global step: 704
+2025-04-20 13:52:07,995 - trainer - INFO -     Net1local_step : 352
+2025-04-20 13:52:07,996 - trainer - INFO -     Net2local_step : 352
+2025-04-20 13:52:07,996 - trainer - INFO -     Net1loss       : 1.969005519693548
+2025-04-20 13:52:07,996 - trainer - INFO -     Net2loss       : 2.016738218001344
+2025-04-20 13:52:07,997 - trainer - INFO -     Net1my_metric  : 0.32395981297348486
+2025-04-20 13:52:07,997 - trainer - INFO -     Net2my_metric  : 0.292660491635101
+2025-04-20 13:52:07,998 - trainer - INFO -     Net1metrics_ema: [0.2565030184659091]
+2025-04-20 13:52:07,998 - trainer - INFO -     Net2metrics_ema: [0.3619619041982323]
+2025-04-20 13:52:07,998 - trainer - INFO -     Net1learning rate: [0.1]
+2025-04-20 13:52:07,999 - trainer - INFO -     Net2learning rate: [0.1]
+2025-04-20 13:52:07,999 - trainer - INFO -     Net1val_loss   : 1.8453866958618164
+2025-04-20 13:52:07,999 - trainer - INFO -     Net2val_loss   : 1.8453866958618164
+2025-04-20 13:52:07,999 - trainer - INFO -     val_my_metric  : 0.3796
+2025-04-20 13:52:08,000 - trainer - INFO -     Net1test_loss  : 1.6303168892860413
+2025-04-20 13:52:08,000 - trainer - INFO -     Net2test_loss  : 1.6303168892860413
+2025-04-20 13:52:08,000 - trainer - INFO -     test_my_metric : 0.4455
+2025-04-20 13:52:08,503 - trainer - INFO - Saving checkpoint: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\checkpoint-epoch3.pth ...
+2025-04-20 13:52:09,119 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\model_best.pth ...
+2025-04-20 14:06:42,656 - trainer - INFO -     epoch          : 4
+2025-04-20 14:06:42,657 - trainer - INFO -     Net1global step: 1056
+2025-04-20 14:06:42,657 - trainer - INFO -     Net2global step: 1056
+2025-04-20 14:06:42,657 - trainer - INFO -     Net1local_step : 352
+2025-04-20 14:06:42,658 - trainer - INFO -     Net2local_step : 352
+2025-04-20 14:06:42,658 - trainer - INFO -     Net1loss       : 1.9084536978466944
+2025-04-20 14:06:42,659 - trainer - INFO -     Net2loss       : 1.9563149098645558
+2025-04-20 14:06:42,659 - trainer - INFO -     Net1my_metric  : 0.36438604797979796
+2025-04-20 14:06:42,660 - trainer - INFO -     Net2my_metric  : 0.33073656486742425
+2025-04-20 14:06:42,660 - trainer - INFO -     Net1metrics_ema: [0.3263198390151515]
+2025-04-20 14:06:42,661 - trainer - INFO -     Net2metrics_ema: [0.3925066090593434]
+2025-04-20 14:06:42,661 - trainer - INFO -     Net1learning rate: [0.1]
+2025-04-20 14:06:42,661 - trainer - INFO -     Net2learning rate: [0.1]
+2025-04-20 14:06:42,662 - trainer - INFO -     Net1val_loss   : 1.7693073511123658
+2025-04-20 14:06:42,662 - trainer - INFO -     Net2val_loss   : 1.7693073511123658
+2025-04-20 14:06:42,662 - trainer - INFO -     val_my_metric  : 0.4109999999999999
+2025-04-20 14:06:42,663 - trainer - INFO -     Net1test_loss  : 1.4981409192085267
+2025-04-20 14:06:42,663 - trainer - INFO -     Net2test_loss  : 1.4981409192085267
+2025-04-20 14:06:42,663 - trainer - INFO -     test_my_metric : 0.49980000000000013
+2025-04-20 14:06:43,167 - trainer - INFO - Saving checkpoint: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\checkpoint-epoch4.pth ...
+2025-04-20 14:06:43,743 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\model_best.pth ...
+2025-04-20 14:21:05,170 - trainer - INFO -     epoch          : 5
+2025-04-20 14:21:05,170 - trainer - INFO -     Net1global step: 1408
+2025-04-20 14:21:05,171 - trainer - INFO -     Net2global step: 1408
+2025-04-20 14:21:05,171 - trainer - INFO -     Net1local_step : 352
+2025-04-20 14:21:05,172 - trainer - INFO -     Net2local_step : 352
+2025-04-20 14:21:05,172 - trainer - INFO -     Net1loss       : 1.8456706966866145
+2025-04-20 14:21:05,172 - trainer - INFO -     Net2loss       : 1.8874031454324722
+2025-04-20 14:21:05,173 - trainer - INFO -     Net1my_metric  : 0.39853367660984845
+2025-04-20 14:21:05,173 - trainer - INFO -     Net2my_metric  : 0.37418126578282823
+2025-04-20 14:21:05,174 - trainer - INFO -     Net1metrics_ema: [0.3619471077967172]
+2025-04-20 14:21:05,174 - trainer - INFO -     Net2metrics_ema: [0.45028655697601006]
+2025-04-20 14:21:05,175 - trainer - INFO -     Net1learning rate: [0.1]
+2025-04-20 14:21:05,175 - trainer - INFO -     Net2learning rate: [0.1]
+2025-04-20 14:21:05,175 - trainer - INFO -     Net1val_loss   : 1.6773459672927857
+2025-04-20 14:21:05,176 - trainer - INFO -     Net2val_loss   : 1.6773459672927857
+2025-04-20 14:21:05,176 - trainer - INFO -     val_my_metric  : 0.4636
+2025-04-20 14:21:05,177 - trainer - INFO -     Net1test_loss  : 1.4013723969459533
+2025-04-20 14:21:05,177 - trainer - INFO -     Net2test_loss  : 1.4013723969459533
+2025-04-20 14:21:05,177 - trainer - INFO -     test_my_metric : 0.5527
+2025-04-20 14:21:05,693 - trainer - INFO - Saving checkpoint: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\checkpoint-epoch5.pth ...
+2025-04-20 14:21:06,291 - trainer - INFO - Saving current best: model_best.pth at: D:\earlystop_framework\results\elr_plus\cifar10_noise20\models\cifar10_elrplus_resnet34_sym_20\0420_130912\model_best.pth ...
